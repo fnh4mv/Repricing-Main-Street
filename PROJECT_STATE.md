@@ -8,7 +8,8 @@
 
 - **GitHub live and synced:** private repo `fnh4mv/Repricing-Main-Street`, push working, all project docs committed. Provenance records tracked in git; raw data and env files excluded by design.
 - **All keys in env (verified):** GitHub PAT, Supabase (personal project `piou...`, confirmed NOT a firm project per D-33), Anthropic, Census, BLS, OSF, HuggingFace, Zenodo.
-- **Data: 2 of 6 landed, 4 await one command on William's Mac** (sandbox blocks .gov and huggingface.co; no workarounds used, per rules). Landed and blob-verified against official repos: **Eloundou** (923 occupations, MIT license) and **Felten AIOE** (774 occupations, no license: cite-only, never redistribute files). Script-pending with pinned integrity checks baked in: **OEWS May 2025** (newest vintage), **ABS 2023 owner-age** (sector-only, confirmed), **BDS 2023 firm-age** (4-digit NAICS exists), **Anthropic AEI** (pinned revision db51ecb, CC-BY).
+- **Data: ALL 6 ENGINE DATASETS LANDED AND VERIFIED** (Eloundou 923 occs, Felten 774, AEI 756 + task files, OEWS May 2025, ABS 2023 owner-age, BDS 2023 firm-age). Every pull pinned, checksummed, provenance-logged.
+- **FREEZE_v1_DRAFT.md is written and awaiting William's signature** (`07_freeze/`), with the OSF walk-through beside it. OEWS granularity probe locked the mapping: HVAC+plumbing share engine score 238220, call centers+transcription share 561400, both disclosed. Primary measure = Eloundou human_rating_beta (human annotations, so no "the model scored itself" attack surface).
 - **Audit (2026-06-10, William-ordered) PASSED:** recomputed checksums match PROVENANCE exactly; row counts and columns verified; no hardcoded secrets in tracked files; official URLs only; MANIFEST accurate (6 rows). Fixed during audit: em dashes purged from 11 internal files (all in titles, all mine), gitignore now tracks PROVENANCE.md while excluding data, missing folders created (04_analysis, 05_paper, 06_distribution, 07_freeze, 02_data/processed), root README rewritten.
 - **Methods fact for the freeze doc:** the three exposure measures use three SOC vintages (Eloundou O*NET-SOC 2019 with 149 specialty codes; Felten SOC 2010; AEI and OEWS SOC 2018). Harmonization rule must be specified in the freeze.
 - **BVR/BIZCOMPS academic-access email drafted** (William's idea): `01_sources/OUTREACH_data_vendors.md`. Send from UVA address.
@@ -27,22 +28,19 @@
 
 ## WILLIAM'S QUEUE (in order)
 
-1. **Run the four fetch scripts** (~2 min, ~60MB, stock python3). From the project folder in Terminal:
-   `python3 03_engine/scripts/fetch_oews.py && python3 03_engine/scripts/fetch_abs_ownerage.py && python3 03_engine/scripts/fetch_bds_firmage.py && python3 03_engine/scripts/fetch_anthropic_aei.py`
-   Each verifies its own checksums and updates its PROVENANCE.md. Tell me when done; I flip MANIFEST rows to LANDED and start the engine build.
-2. **Send the BVR/BIZCOMPS email** from fnh4mv@virginia.edu: ready in `01_sources/OUTREACH_data_vendors.md`.
-3. **Forward the librarian verdict** when it lands; paste any Darden data details into chat.
+1. **GATE 1 OF THE AUTHORSHIP CONTRACT: read, edit, and sign `07_freeze/FREEZE_v1_DRAFT.md`** (~30 min). This is the document a referee will judge you by. Push back on anything. Then register it on OSF per `07_freeze/OSF_REGISTRATION_GUIDE.md` (10 min, embargo to 2026-08-05) and paste the registration URL + DOI into chat. NOTHING pricing-side runs until this is done, and the panel clock is ticking toward Jun 14.
+2. **Darden professor:** when they reply, share what they're offering (data access? feedback?). A faculty reader is the D-30 credibility slot.
+3. **Forward librarian/BVR replies** as they land.
 4. **Valuation pre-reader:** one name by ~Jun 21, Jul 13 save-the-date (D-30).
 5. (Standing) Chad heads-up before W6; W5 writing block calendared Jul 6-12.
 
 ## NEXT ACTIONS (machine queue, in order)
 
-1. **Freeze doc draft** → `07_freeze/FREEZE_v1_DRAFT.md`: basket NAICS mapping (Appendix A), SOC harmonization rule, primary measure spec, min-cell rule, robustness set, MDE method, three result framings. For William's gate-1 signature.
-2. OSF registration walk-through (account exists, token in env; embargo settings, bland title).
-3. Wayback CDX audit script (his Mac; archive.org blocked in sandbox).
-4. Weekly panel snapshot script + launchd plist + Supabase DDL + SETUP_MAC.md. First wave must run by Jun 14.
-5. After his data lands: engine v1 build (staffing-mix join, exposure scores), Gate 1 sanity check.
-6. Toy slice AFTER freeze registered: feasibility counts only (D-20).
+1. **Panel snapshot script + launchd plist + Supabase DDL + SETUP_MAC.md** (runs only after OSF registration; first wave by Jun 14).
+2. **Wayback CDX audit script** (his Mac; archive.org blocked in sandbox). Gate 0 needs the yield number.
+3. **Engine v1 build** (SOC harmonization + staffing-mix join + scores per freeze Section 4) and the Gate 1 sanity ranking. Data is all here; can start immediately, engine side is not pricing data.
+4. Toy slice AFTER freeze registered: feasibility counts only (D-20).
+5. Exhibit 1 draft (exposure map) once Gate 1 passes.
 
 ## Open questions
 
