@@ -1,7 +1,7 @@
 # PROJECT_STATE.md - Living State
 
-**Last updated:** 2026-06-10 (Session 03, W1 collection + audit)
-**Phase:** W1 in progress. Gate 0 due Jun 14.
+**Last updated:** 2026-06-10 (Session 03 close: FREEZE REGISTERED)
+**Phase:** W1. Freeze is REGISTERED (OSF z79qh, 2026-06-10, embargoed; see 07_freeze/OSF_RECORD.md). Pricing collection UNLOCKED. Gate 0 remaining legs due Jun 14: panel wave 1 + Wayback yield.
 **Launch target:** SSRN + site + LinkedIn live by Aug 2, 2026. Hard floor: before August apps.
 
 ## Status snapshot
@@ -28,11 +28,13 @@
 
 ## WILLIAM'S QUEUE (in order)
 
-1. **GATE 1 OF THE AUTHORSHIP CONTRACT: read, edit, and sign `07_freeze/FREEZE_v1_DRAFT.md`** (~30 min). This is the document a referee will judge you by. Push back on anything. Then register it on OSF per `07_freeze/OSF_REGISTRATION_GUIDE.md` (10 min, embargo to 2026-08-05) and paste the registration URL + DOI into chat. NOTHING pricing-side runs until this is done, and the panel clock is ticking toward Jun 14.
-2. **Darden professor:** when they reply, share what they're offering (data access? feedback?). A faculty reader is the D-30 credibility slot.
-3. **Forward librarian/BVR replies** as they land.
-4. **Valuation pre-reader:** one name by ~Jun 21, Jul 13 save-the-date (D-30).
-5. (Standing) Chad heads-up before W6; W5 writing block calendared Jul 6-12.
+1. **DONE 2026-06-10: freeze signed + registered** (OSF z79qh). Authorship gate 1 complete.
+2. **Run panel wave 1 + Wayback audit when the scripts land** (next machine session ships them; ~5 min of your time, before Sunday Jun 14).
+3. **Paste the OSF DOI** into 07_freeze/OSF_RECORD.md when OSF mints it.
+4. **Darden professor:** when they reply, share what they're offering (data? feedback? both?). Faculty reader = the D-30 credibility slot.
+5. **Forward librarian/BVR replies** as they land.
+6. **Valuation pre-reader:** one name by ~Jun 21, Jul 13 save-the-date (D-30).
+7. (Standing) Chad heads-up before W6; W5 writing block calendared Jul 6-12.
 
 ## NEXT ACTIONS (machine queue, in order)
 
