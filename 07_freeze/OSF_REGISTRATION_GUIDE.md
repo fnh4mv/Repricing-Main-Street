@@ -12,3 +12,9 @@ Do this AFTER you've edited and signed FREEZE_v1_DRAFT.md. Nothing pricing-relat
 8. Paste the URL + DOI + timestamp into a new file `07_freeze/OSF_RECORD.md` (or into chat and I'll file it). The frozen doc then gets renamed FREEZE_v1_SIGNED.md in the repo, and that exact text never changes again.
 
 That's Gate 0's first leg. After this: panel wave 1 and the Wayback audit are allowed to run.
+https://osf.io/z79qh/overview
+
+Date registered
+Jun 10, 2026
+Registration Type
+Open-Ended Registration

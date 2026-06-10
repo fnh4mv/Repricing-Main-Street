@@ -119,5 +119,5 @@ Prose, exhibit design and styling, the order of sections, the title of the publi
 
 I have read this specification, edited what needed editing, and I sign it as the frozen design of the study.
 
-Signed: ____________________  Date: ____________
+Signed: __William Sheets_________  Date: ___06/10/2026
 William Sheets
