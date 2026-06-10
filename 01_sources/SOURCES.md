@@ -1,4 +1,4 @@
-# SOURCES.md — Source Registry
+# SOURCES.md - Source Registry
 
 Status: ✅ verified this project · ⬜ to pull · Each paper citation must trace back to an entry here.
 

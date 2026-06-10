@@ -1,4 +1,4 @@
-# MASTER PLAN — Repricing Main Street
+# MASTER PLAN - Repricing Main Street
 
 **Paper:** Repricing Main Street: AI Exposure, the Succession Wave, and What Buyers Aren't Pricing
 **Author:** William Sheets (University of Virginia), built with Claude (disclosed, instrumented)
@@ -35,7 +35,7 @@ Dependencies: A and B run parallel from W1. C needs the freeze (end W1) + B yiel
 
 ## 2. Week-by-week (June 9 → August 2, buffer to Aug 7)
 
-### W1 · Jun 9-14 — Freeze + first collection
+### W1 · Jun 9-14 - Freeze + first collection
 - Pull OEWS national industry staffing (3/4-digit NAICS), Eloundou scores, Felten AIOE, Anthropic AEI, ABS owner-age (2-digit), BDS firm-age (complement check). All into `02_data/raw/` with manifest entries.
 - Draft freeze doc: basket NAICS mapping table (Appendix A), primary measure, main spec, min-cell rule, robustness set, MDE method, three result framings. **William gate 1: edit + sign.**
 - Register on OSF with embargo, bland working title. THEN toy slice (counts only, D-20).
@@ -44,39 +44,39 @@ Dependencies: A and B run parallel from W1. C needs the freeze (end W1) + B yiel
 - William: UVA 10-minute library check + librarian email; SSRN account created NOW (new unaffiliated accounts screen slower); Chad heads-up conversation (not clearance, just awareness).
 - **GATE 0 (end W1): freeze registered, panel running, Wayback yield known.**
 
-### W2 · Jun 15-21 — Engine v1
+### W2 · Jun 15-21 - Engine v1
 - Build per-NAICS exposure scores: Σ(occupation share × exposure). Eloundou primary, AEI second tier, Felten sensitivity column. Swappable weights file.
 - **GATE 1: sanity ranking.** Bookkeeping/tax prep must outscore plumbing/HVAC by a wide margin; if the ranking looks wrong, stop and fix the crosswalk before anything else. This is the derisk moment for the whole engine.
 - Exhibit 1 draft (exposure × succession context map, "death in escrow" quadrant).
 - Recruit the valuation-professional pre-reader with a save-the-date for ~Jul 13 (their latency is slip source #2).
 - Paper outline v1 + intro first draft (William writes, machine edits after, per gate 3).
 
-### W3 · Jun 22-28 — Pricing assembly (THE LONG POLE)
+### W3 · Jun 22-28 - Pricing assembly (THE LONG POLE)
 - Current BizBuySell cross-section across the 10 basket categories + Wayback historical cross-sections + transcribe all broker PDF back-issues (BizBuySell Insight quarterly sector tables, IBBA Market Pulse) to CSV with page cites.
 - **GATE 2: the n table.** Listings per category per period, SDE disclosure rates. If Wayback is thin: broker PDFs become the primary time series, pre-decided, no deliberation (D-07).
 - Exhibit skeletons for whatever the data supports (basket medians by period, disclosure-rate exhibit).
 
-### W4 · Jun 29-Jul 5 — Analysis per freeze
+### W4 · Jun 29-Jul 5 - Analysis per freeze
 - Run the frozen spec. Compute MDE. Build exhibits v1: trend plot with CIs, basket gap, travel benchmark exhibit, robustness set.
 - **GATE 3: result class declared** (discount / null-at-MDE / premium). Drop in the pre-written framing. **William gate 5: one-line takeaway per exhibit.**
 
-### W5 · Jul 6-12 — William's writing block
+### W5 · Jul 6-12 - William's writing block
 - **DealStats gate:** buy the $365 day pass only if UVA is dead AND the result is publishable-but-fragile (D-06). His call, his card.
 - **William gates 2, 3, 4:** 20-listing hand audit; abstract/intro/conclusion first drafts; re-run headline notebook + perturb one assumption. This is his unmovable 8-10 hour block. Protect it.
 - Machine drafts all middle sections around his drafts, in VOICE.md voice.
 
-### W6 · Jul 13-19 — Review round
+### W6 · Jul 13-19 - Review round
 - Draft v1 to valuation pre-reader + SMEs, 7-day hard window, proceed with whoever replies.
 - **Chad gets the near-final NOW** with a 5-business-day ask (not W7; his latency is slip source #1).
 - Provenance appendix assembled from session logs.
 
-### W7 · Jul 20-26 — Final + submit
+### W7 · Jul 20-26 - Final + submit
 - Revisions from reviews. Final PDF (typeset clean, exhibits final).
 - **William gate 6: oral exam.** 15 hostile interviewer questions, answered cold; misses studied before going live.
 - **SSRN submission Jul 24-27** (screening 2-5 business days, longer possible for new accounts; submit early in the week).
 - Stage website page + LinkedIn posts + curated public repo.
 
-### W8 · Jul 27-Aug 2 — Launch
+### W8 · Jul 27-Aug 2 - Launch
 - SSRN live → 3-post launch week (D-28): Day 0 announce, Day 2 killer exhibit, Day 5 "how I built this with AI."
 - Curated public repo + aggregates live. OSF embargo lifts.
 - Buffer to Aug 7. Then W9+: derivative essay pitched to 2-3 outlets (The Diff / Net Interest tier, Axial Middle Market Review).

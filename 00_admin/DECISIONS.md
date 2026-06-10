@@ -1,4 +1,4 @@
-# DECISIONS.md — Locked Decision Log
+# DECISIONS.md - Locked Decision Log
 
 Sources: [WS] = William's intake answers (2026-06-09) · [PT] = pressure-test resolution · [CC] = Claude call on items William delegated.
 Reversing a [1WD] decision requires an explicit entry here with reasoning.

@@ -1,50 +1,54 @@
-# PROJECT_STATE.md — Living State
+# PROJECT_STATE.md - Living State
 
-**Last updated:** 2026-06-09 (Session 02, pre-flight quick session)
-**Phase:** W0 complete. W1 runs when William lands.
+**Last updated:** 2026-06-10 (Session 03, W1 collection + audit)
+**Phase:** W1 in progress. Gate 0 due Jun 14.
 **Launch target:** SSRN + site + LinkedIn live by Aug 2, 2026. Hard floor: before August apps.
 
 ## Status snapshot
 
-- Plan locked (MASTER_PLAN v1.0), decisions D-01..D-34. Travel-agency call **LOCKED** by William (D-13).
-- **Git is live:** repo initialized at folder root, first commit done (10 files, 634 lines), remote wired to `github.com/fnh4mv/Repricing-Main-Street-` (private). Push pending one thing: William's PAT in `.env`.
-- `.env` scaffold created at folder root (gitignored): GITHUB_PAT, SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY, ANTHROPIC_API_KEY, OSF_TOKEN. William fills when he lands. Note: the env file he created earlier is NOT in this folder (probably parent "Sheets Paper" folder, which is outside my view); values go into this `.env`.
-- **Supabase separation flag (D-33):** connected MCP sees only firm projects (egos-dev, eGOS Backend). Off-limits per D-10. Paper's Supabase = personal-org project, creds in `.env`.
-- William done: SSRN account created · UVA librarian email sent (no DealStats/BIZCOMPS visible in catalog, matching our research) · runner = Mac (D-34) · Chad heads-up planned · W5 block acknowledged.
-- No data pulled yet (freeze first, D-12).
+- **GitHub live and synced:** private repo `fnh4mv/Repricing-Main-Street`, push working, all project docs committed. Provenance records tracked in git; raw data and env files excluded by design.
+- **All keys in env (verified):** GitHub PAT, Supabase (personal project `piou...`, confirmed NOT a firm project per D-33), Anthropic, Census, BLS, OSF, HuggingFace, Zenodo.
+- **Data: 2 of 6 landed, 4 await one command on William's Mac** (sandbox blocks .gov and huggingface.co; no workarounds used, per rules). Landed and blob-verified against official repos: **Eloundou** (923 occupations, MIT license) and **Felten AIOE** (774 occupations, no license: cite-only, never redistribute files). Script-pending with pinned integrity checks baked in: **OEWS May 2025** (newest vintage), **ABS 2023 owner-age** (sector-only, confirmed), **BDS 2023 firm-age** (4-digit NAICS exists), **Anthropic AEI** (pinned revision db51ecb, CC-BY).
+- **Audit (2026-06-10, William-ordered) PASSED:** recomputed checksums match PROVENANCE exactly; row counts and columns verified; no hardcoded secrets in tracked files; official URLs only; MANIFEST accurate (6 rows). Fixed during audit: em dashes purged from 11 internal files (all in titles, all mine), gitignore now tracks PROVENANCE.md while excluding data, missing folders created (04_analysis, 05_paper, 06_distribution, 07_freeze, 02_data/processed), root README rewritten.
+- **Methods fact for the freeze doc:** the three exposure measures use three SOC vintages (Eloundou O*NET-SOC 2019 with 149 specialty codes; Felten SOC 2010; AEI and OEWS SOC 2018). Harmonization rule must be specified in the freeze.
+- **BVR/BIZCOMPS academic-access email drafted** (William's idea): `01_sources/OUTREACH_data_vendors.md`. Send from UVA address.
+- UVA librarian inquiry out; Darden library reportedly pulling some data for William (details pending).
+- Plan locked (MASTER_PLAN v1.0), decisions D-01..D-34, travel-agency call LOCKED (D-13).
 
 ## Gate status
 
 | Gate | What | Status |
 |------|------|--------|
 | 0 | Freeze registered (OSF embargo) + panel wave 1 + Wayback yield known | OPEN, due Jun 14 |
-| 1 | Engine sanity ranking (bookkeeping ≫ plumbing) | pending, due Jun 21 |
+| 1 | Engine sanity ranking (bookkeeping >> plumbing) | pending, due Jun 21 |
 | 2 | Pricing n-table (n per category-quarter, SDE disclosure rates) | pending, due Jun 28 |
 | 3 | Result class declared (discount / null-at-MDE / premium) | pending, due Jul 5 |
-| DealStats | $365 buy decision (D-06; librarian reply may moot it) | pending, Jul 6 |
+| DealStats | $365 buy decision (D-06; librarian/BVR replies may moot it) | pending, Jul 6 |
 
-## WILLIAM'S QUEUE
+## WILLIAM'S QUEUE (in order)
 
-1. **Fill `.env` when you land** (file is at the folder root; in Finder press Cmd+Shift+. to see dotfiles): GitHub fine-grained PAT (repo-scoped, Contents: read/write), your PERSONAL Supabase project URL + keys (not egos-dev / eGOS Backend, D-33), Anthropic API key. Say "env ready" and I push the repo + wire the panel.
-2. **Librarian reply:** forward the verdict on DealStats/BIZCOMPS when it arrives.
-3. **Chad heads-up** when natural (before W6).
-4. **Valuation pre-reader:** start thinking of one name; recruit by ~Jun 21 with a Jul 13 save-the-date (D-30).
+1. **Run the four fetch scripts** (~2 min, ~60MB, stock python3). From the project folder in Terminal:
+   `python3 03_engine/scripts/fetch_oews.py && python3 03_engine/scripts/fetch_abs_ownerage.py && python3 03_engine/scripts/fetch_bds_firmage.py && python3 03_engine/scripts/fetch_anthropic_aei.py`
+   Each verifies its own checksums and updates its PROVENANCE.md. Tell me when done; I flip MANIFEST rows to LANDED and start the engine build.
+2. **Send the BVR/BIZCOMPS email** from fnh4mv@virginia.edu: ready in `01_sources/OUTREACH_data_vendors.md`.
+3. **Forward the librarian verdict** when it lands; paste any Darden data details into chat.
+4. **Valuation pre-reader:** one name by ~Jun 21, Jul 13 save-the-date (D-30).
+5. (Standing) Chad heads-up before W6; W5 writing block calendared Jul 6-12.
 
-## NEXT ACTIONS (machine queue, W1, in order)
+## NEXT ACTIONS (machine queue, in order)
 
-0. Push initial commit to GitHub the moment PAT lands; verify with `git ls-remote`.
-1. Pull OEWS staffing matrices, Eloundou, Felten AIOE, Anthropic AEI, ABS owner-age, BDS firm-age → `02_data/raw/` + MANIFEST entries.
-2. Draft freeze doc (basket NAICS mapping, spec, min-cell, robustness, MDE method, three framings) → `07_freeze/` for William's gate-1 sign-off.
-3. OSF registration walk-through for William (account, embargo, bland title).
-4. Wayback CDX audit script (his machine or Claude-in-Chrome; archive.org blocked in sandbox).
-5. Weekly panel snapshot script for Mac launchd + Supabase DDL (personal project) + dated CSV fallback.
-6. Toy slice AFTER freeze: feasibility counts only (D-20).
+1. **Freeze doc draft** → `07_freeze/FREEZE_v1_DRAFT.md`: basket NAICS mapping (Appendix A), SOC harmonization rule, primary measure spec, min-cell rule, robustness set, MDE method, three result framings. For William's gate-1 signature.
+2. OSF registration walk-through (account exists, token in env; embargo settings, bland title).
+3. Wayback CDX audit script (his Mac; archive.org blocked in sandbox).
+4. Weekly panel snapshot script + launchd plist + Supabase DDL + SETUP_MAC.md. First wave must run by Jun 14.
+5. After his data lands: engine v1 build (staffing-mix join, exposure scores), Gate 1 sanity check.
+6. Toy slice AFTER freeze registered: feasibility counts only (D-20).
 
 ## Open questions
 
-- UVA librarian verdict (may kill or confirm the $365 DealStats gate).
+- UVA librarian / Darden data verdict (may moot the $365 DealStats gate).
+- BVR reply (1-2 weeks; lands near the Jul 6 gate).
 - Valuation pre-reader name.
-- Whether William's personal Supabase project exists yet or needs creating (his org, his account; 2 minutes).
 
 ## Parking lot (v2, not now)
 
@@ -53,4 +57,5 @@ Interactive web map · live engine/dashboard · The Audit · The Unmarked Risk �
 ## Session log index
 
 - [2026-06-09 · Session 01](00_admin/SESSION_LOG/2026-06-09_session-01.md): intake, lenses, pressure test, plan locked, folder built.
-- [2026-06-09 · Session 02](00_admin/SESSION_LOG/2026-06-09_session-02.md): William's answers locked, git live + remote wired, .env scaffold, Supabase separation flag.
+- [2026-06-09 · Session 02](00_admin/SESSION_LOG/2026-06-09_session-02.md): answers locked, git wired, env scaffold, Supabase separation flag.
+- [2026-06-10 · Session 03](00_admin/SESSION_LOG/2026-06-10_session-03.md): GitHub synced, keys verified, 2 datasets landed + 4 scripted, full audit passed with fixes.

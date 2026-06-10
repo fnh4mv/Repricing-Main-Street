@@ -1,4 +1,4 @@
-# CLAUDE.md — Boot File for Repricing Main Street
+# CLAUDE.md - Boot File for Repricing Main Street
 
 Read this first, every session. Then read PROJECT_STATE.md. That's the whole boot.
 

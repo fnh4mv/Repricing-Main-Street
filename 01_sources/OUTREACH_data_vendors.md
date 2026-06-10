@@ -2,7 +2,7 @@
 
 Status: drafted 2026-06-09. Send from fnh4mv@virginia.edu (UVA identity, not firm). Same template adapts to PeerComps. Parallel track: UVA librarian already asked about mediated access; if they mention a BVR trial, take it.
 
-## Email 1 — BVR / BIZCOMPS (send now)
+## Email 1 - BVR / BIZCOMPS (send now)
 
 **To:** sales@bvresources.com (cc: any academic/library contact their site lists)
 **Subject:** Student research request: limited BIZCOMPS access for a public Main Street pricing study

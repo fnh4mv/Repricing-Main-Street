@@ -1,4 +1,4 @@
-# VOICE.md — How William Writes (Default Voice for All Deliverables)
+# VOICE.md - How William Writes (Default Voice for All Deliverables)
 
 Source: williamsheets.com (annual letter, graduation speech, four McIntire essays), captured 2026-06-09.
 This is the default voice for the paper, LinkedIn posts, the website, and any prose published under William's name. Internal docs can be looser but follow the bans.

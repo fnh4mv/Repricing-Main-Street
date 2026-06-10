@@ -9,8 +9,11 @@ ENV*
 # OS noise
 .DS_Store
 
-# Bulk raw data stays on disk; manifests are the git record
+# Bulk raw data stays on disk; provenance and manifests ARE tracked
 02_data/raw/*
+!02_data/raw/*/
+02_data/raw/*/*
+!02_data/raw/*/PROVENANCE.md
 01_sources/quarterly_pdfs/
 
 # Python/notebook noise
