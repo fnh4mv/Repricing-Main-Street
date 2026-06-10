@@ -1,0 +1,22 @@
+# Secrets: never committed
+.env
+.env.*
+ENV*
+*.pem
+*.key
+
+# OS noise
+.DS_Store
+
+# Bulk raw data stays on disk; manifests are the git record
+02_data/raw/*
+01_sources/quarterly_pdfs/
+
+# Python/notebook noise
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+
+# Node
+node_modules/
