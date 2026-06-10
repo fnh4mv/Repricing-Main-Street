@@ -5,16 +5,16 @@ Status: ✅ verified this project · ⬜ to pull · Each paper citation must tra
 ## Anchors (credibility spine)
 
 - ✅ **McKinsey Institute for Economic Mobility (Feb 2026):** ~6M SMBs, up to $5T transitioning by 2035; ~80% of exits sub-$2M "missing middle." Use as THE succession anchor. ⬜ Pull the actual report PDF + page cites; one independent cross-check (Project Equity / Exit Planning Institute estimates) per D-19 numbers hygiene.
-- ⬜ **Eloundou et al., "GPTs are GPTs"** (task-level GPT exposure by occupation). PRIMARY exposure measure ("could"). Pull scores dataset + paper.
-- ⬜ **Felten, Raj, Seamans AIOE** (AI Occupational Exposure). Sensitivity column. Public dataset on GitHub.
-- ⬜ **Anthropic Economic Index** (anthropic.com/research/economic-index-primitives): observed Claude task usage by SOC, automation vs augmentation shares. Second scored tier ("is"). Verify license/attribution terms before redistribution of derived scores.
+- ✅ **Eloundou et al., "GPTs are GPTs"** (task-level GPT exposure by occupation). PRIMARY exposure measure ("could"). Pull scores dataset + paper.
+- ✅ **Felten, Raj, Seamans AIOE** (AI Occupational Exposure). Sensitivity column. Public dataset on GitHub.
+- ✅ **Anthropic Economic Index** (anthropic.com/research/economic-index-primitives): observed Claude task usage by SOC, automation vs augmentation shares. Second scored tier ("is"). Verify license/attribution terms before redistribution of derived scores.
 - Note (verified): Felten × Eloundou correlate ~0.92 at coarse occupation groups; divergence lives at fine occupations. Agreement matrix alone is not informative; say so honestly.
 
 ## Government data (free, redistributable)
 
-- ⬜ **BLS OEWS** industry-specific staffing matrices, national, 3/4-digit NAICS (bls.gov/oes → industry estimates). The staffing-mix backbone.
-- ⬜ **Census ABS, Characteristics of Business Owners:** owner age, 2-digit sector ONLY (verified constraint, drives D-16). API available.
-- ⬜ **Census BDS:** firm age by detailed NAICS (complement check for succession context; firm age ≠ owner age, label honestly).
+- ✅ **BLS OEWS** industry-specific staffing matrices, national, 3/4-digit NAICS (bls.gov/oes → industry estimates). The staffing-mix backbone.
+- ✅ **Census ABS, Characteristics of Business Owners:** owner age, 2-digit sector ONLY (verified constraint, drives D-16). API available.
+- ✅ **Census BDS:** firm age by detailed NAICS (complement check for succession context; firm age ≠ owner age, label honestly).
 
 ## Pricing evidence
 
