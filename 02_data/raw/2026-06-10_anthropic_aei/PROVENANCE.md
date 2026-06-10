@@ -43,3 +43,21 @@ Download URL pattern: `https://huggingface.co/datasets/Anthropic/EconomicIndex/r
 
 ## Structure verification
 To be appended by the fetch script after download (sha256, row counts, columns per file).
+
+## Download log (appended by fetch_anthropic_aei.py)
+- Run timestamp (UTC): 2026-06-10T19:06:46Z
+- Revision: db51ecb12920faef6df2b21dff6207ebcbc72c6f
+
+| File | sha256 | Verified vs pinned git sha1 | Data rows | Columns |
+|---|---|---|---|---|
+| labor_market_impacts/job_exposure.csv | 4f0a3adf5feeb2ec5f5d02ab18cc5e851a2a4b8470bde84c0c9335017be12d68 | yes | 756 | occ_code; title; observed_exposure |
+| labor_market_impacts/task_penetration.csv | 85bee872db1d55d3e9a7f4e89da5ae4a5d59aa8ec875d728fbf4b7d820984616 | yes | 17998 | task; penetration |
+| release_2025_03_27/task_pct_v1.csv | 8de89c99f762146c9e46b2202c3501e2a14f11c5b44c61c8007021127b6c676e | yes | 3514 | task_name; pct |
+| release_2025_03_27/task_pct_v2.csv | 0c20f184cd4a1e3d8ef3d77f500b32b62431ce61a3c2f133c3af7fa8429f97db | yes | 3365 | task_name; pct |
+| release_2025_03_27/automation_vs_augmentation_by_task.csv | f6570714a9af31ae783fd91bd7ee3b2e9cfabcbf522a30ba1aa9b1f230665e79 | yes | 3364 | task_name; feedback_loop; directive; task_iteration; validation; learning; filtered |
+| release_2025_03_27/automation_vs_augmentation_v1.csv | d1e264882b17618db4f4a00b6f87f48134222bc5c15eefb3d46aae9519e89d11 | yes | 6 | interaction_type; pct |
+| release_2025_03_27/automation_vs_augmentation_v2.csv | 0d7d8b1666f3d942d728f9b2177681ca6756edfe01fb8fc130e29264d41a391e | yes | 6 | interaction_type; pct |
+| release_2025_03_27/onet_task_statements.csv | 82e4c418dc08475ef1263ad1e8c66ffa3357291370cd35ee1065ecea590597ec | yes | 19530 | O*NET-SOC Code; Title; Task ID; Task; Task Type; Incumbents Responding; Date; Domain Source |
+| release_2025_03_27/SOC_Structure.csv | 05eb5e689fb471b7a66962b57bba6666dee2c3e6a6854f0f84faf423af68dd17 | yes | 1596 | Major Group; Minor Group; Broad Occupation; Detailed Occupation; Detailed O*NET-SOC; SOC or O*NET-SOC 2019 Title |
+| release_2025_03_27/README.md | 0a72214226fa9815a16881b5c872045e84a8d70420090875f1cc975c9ad8ef3a | yes |  |  |
+| README.md | 3a8e7056bf8800f1467652079a49edcc3f4dcb2bbd335450fc2d0ec5b0e18deb | yes |  |  |

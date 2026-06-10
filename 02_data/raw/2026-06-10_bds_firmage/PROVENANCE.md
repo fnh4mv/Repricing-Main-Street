@@ -38,3 +38,17 @@ Pending. Auto-appended by the fetch script as a Landing record below.
 
 - 2026-06-10T16:13Z to 16:22Z UTC: sandbox shell egress to www2.census.gov and www.census.gov refused by proxy allowlist (HTTP 403, X-Proxy-Error: blocked-by-allowlist). Per fetch discipline, no workaround attempted; catalog reconnaissance only was done via web fetch on the BDS datasets page to pin the exact URL and confirm BDS 2023 is the newest vintage.
 - Collected by: DATA-2 agent (Claude), session 2026-06-10.
+
+## Landing record (auto-appended by fetch_bds_firmage.py)
+
+- Retrieved (UTC): 2026-06-10T19:06:43Z
+- Source URL: https://www2.census.gov/programs-surveys/bds/tables/time-series/2023/bds2023_vcn4_fa.csv
+- File: bds2023_vcn4_fa.csv, 19,115,715 bytes
+- sha256: 3f30d58e36f6adac9fa4d47eb87507056e0555ef9420fa1109b751836e11657f
+- Data rows (excl. header): 158,976
+- Columns: year, vcnaics4, fage, firms, estabs, emp, denom, estabs_entry, estabs_entry_rate, estabs_exit, estabs_exit_rate, job_creation, job_creation_births, job_creation_continuers, job_creation_rate_births, job_creation_rate, job_destruction, job_destruction_deaths, job_destruction_continuers, job_destruction_rate_deaths, job_destruction_rate, net_job_creation, net_job_creation_rate, reallocation_rate, firmdeath_firms, firmdeath_estabs, firmdeath_emp
+- Years: through 2023
+- Firm-age buckets: a) 0; b) 1; c) 2; d) 3; e) 4; f) 5; g) 6 to 10; h) 11 to 15; i) 16 to 20; j) 21 to 25; k) 26+; l) Left Censored
+- Distinct 4-digit NAICS codes: 288
+- NAICS 5412 present: yes
+- Verified by: fetch_bds_firmage.py

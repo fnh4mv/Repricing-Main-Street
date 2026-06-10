@@ -38,3 +38,14 @@ Pending. Auto-appended by the fetch script as a Landing record below.
 
 - 2026-06-10T16:13Z to 16:22Z UTC: sandbox shell egress to www.bls.gov and download.bls.gov refused by proxy allowlist (HTTP 403, X-Proxy-Error: blocked-by-allowlist). Per fetch discipline, no workaround attempted; catalog reconnaissance only was done via web fetch on https://www.bls.gov/oes/tables.htm to pin the exact URL and confirm May 2025 is the newest published vintage.
 - Collected by: DATA-2 agent (Claude), session 2026-06-10.
+
+## Landing record (auto-appended by fetch_oews.py)
+
+- Retrieved (UTC): 2026-06-10T19:05:39Z
+- Source URL: https://www.bls.gov/oes/special-requests/oesm25in4.zip
+- File: oesm25in4.zip, 31,514,940 bytes
+- sha256: 3ef0e42fab1b42a7dac8a3a9b3e7024f5d7a07eff308bff5fc91808061ec08e1
+- Zip members: 9 (oesm25in4/; oesm25in4/file_descriptions.xlsx; oesm25in4/nat3d_M2025_dl.xlsx; oesm25in4/nat3d_owner_M2025_dl.xlsx; oesm25in4/nat4d_M2025_dl.xlsx; oesm25in4/nat4d_owner_M2025_dl.xlsx; oesm25in4/nat5d_6d_M2025_dl.xlsx; oesm25in4/national_owner_M2025_dl.xlsx; oesm25in4/natsector_M2025_dl.xlsx)
+- 4-digit industry file: oesm25in4/nat4d_M2025_dl.xlsx (row count pending openpyxl)
+- NAICS 5412 verification: pending openpyxl run
+- Verified by: fetch_oews.py
