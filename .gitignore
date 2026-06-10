@@ -2,6 +2,7 @@
 .env
 .env.*
 ENV*
+*.env
 *.pem
 *.key
 
